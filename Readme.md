@@ -38,7 +38,7 @@
 
         +Tiếp theo:
             * Về phần cơ chế chính của bài(thiết lập các hàm chính):
-            ->hàm sinh số ngẫu nhiên void generateUnoccupiedPostion()
+            ->Hàm sinh số ngẫu nhiên void generateUnoccupiedPostion()
                 (): tạo mảng vector pair ArraySaveRect dùng để lưu lại tọa độ của các ô còn trống để sinh ảnh ngẫu nhiên, với hai thành phần lần lượt là số dạng int 
                 là hoành độ và tung độ của ô thỏa mãn chưa có ảnh 
                 (): tại đây nếu như ArraySaveRect.size()==0 thì biến bool endgame=true(được khởi tạo là biến toàn cục), biến này sẽ giúp cho máy nhận biết được là trên màn hình chính các ô đều đang có ảnh.

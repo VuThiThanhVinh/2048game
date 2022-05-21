@@ -17,12 +17,15 @@ bool check=false;
 
 //bien kiem tra sinh so ngau nhien cua ham sinh so ngau nhien
 bool test=true;
-
+// bien dung de check dieu kien end game la co du 16 anh tren cac o hay chua
 bool endgame=false;
+
 bool backgroundendgame=false;
 int count;
 int checkscreen=0;
+//khoa dung de khoa anh sinh ngau nhien luc mo chuong trinh
 bool key=true;
+//kiem tra da sinh anh 2048 hay chua,neu sinh anh 2048 thi se win
 bool win=false;
 // toa do di kem voi anh tai cac o
 pair<SDL_Rect,SDL_Surface*>arr[4][4];

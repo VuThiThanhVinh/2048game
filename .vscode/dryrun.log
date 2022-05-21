@@ -1,5 +1,5 @@
 make.exe --dry-run --always-make --keep-going --print-directory
-make.exe: Entering directory `c:/Users/Vu Thi Thanh VINH/Documents/save vscode/banthu2048so4'
+make.exe: Entering directory `c:/Users/Vu Thi Thanh VINH/Desktop/2048game'
 g++ -Isrc/include -Lsrc/lib -o main main.cpp board.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
-make.exe: Leaving directory `c:/Users/Vu Thi Thanh VINH/Documents/save vscode/banthu2048so4'
+make.exe: Leaving directory `c:/Users/Vu Thi Thanh VINH/Desktop/2048game'
  
