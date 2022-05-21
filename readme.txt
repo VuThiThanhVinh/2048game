@@ -1,4 +1,4 @@
-# 1.Hướng dẫn cài đặt:
+## 1.Hướng dẫn cài đặt:
 
 Bước 1: fork repo này về github cá nhân
 Bước 2:mở command port tại tệp muốn lưu code tải về
@@ -7,7 +7,7 @@ Bước 4: mở folder code vừa được tải về bằng phần mềm
 Bước 5: New Terminal, nhập vào Terminal lệnh: make
 Bước 6: nhập tiếp lệnh: .\main.exe rồi Enter để chạy chương trình
 
-# 2.Mô tả chung về trò chơi, các ý tưởng chính
+## 2.Mô tả chung về trò chơi, các ý tưởng chính
 
 về cách chơi:
     màn hình menu hiện ra, nhấn Enter để chuyển đến phần màn hình bảng chính để chơi
