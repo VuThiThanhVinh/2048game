@@ -69,7 +69,7 @@ Các ý tưởng chính:
 
 phím Enter có chức năng khởi động lại nhạc nền.
 di chuyển lên, xuống,sang trái,sang phải
-
+Link video: https://youtu.be/RzW8A736RGU
 4.Các kỹ thuật lập trình được sử dụng trong chương trình (mảng, con trỏ, cấu trúc, lớp, đồ họa ...)
 
 Kĩ thuật được dùng nhiều nhất trong bài là sử dụng mảng, bởi đa phần chỉ cần liên kết ảnh với tọa độ để kiểm tra và sử dụng các hàm.
