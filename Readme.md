@@ -37,11 +37,11 @@
              thành phần thứ hai là Box(ảnh tại các ô trong bảng)
 
         +Tiếp theo:
-            * về phần cơ chế chính của bài(thiết lập các hàm chính):
+            * Về phần cơ chế chính của bài(thiết lập các hàm chính):
             ->hàm sinh số ngẫu nhiên void generateUnoccupiedPostion()
                 (): tạo mảng vector pair ArraySaveRect dùng để lưu lại tọa độ của các ô còn trống để sinh ảnh ngẫu nhiên, với hai thành phần lần lượt là số dạng int 
                 là hoành độ và tung độ của ô thỏa mãn chưa có ảnh 
-                (): tại đây nếu như ArraySaveRect.size()==0 thì biến bool endgame=true(được khởi tạo làm biến toàn cục), biến này sẽ giúp cho máy nhận biết được là trên màn hình chính các ô đều đang có ảnh
+                (): tại đây nếu như ArraySaveRect.size()==0 thì biến bool endgame=true(được khởi tạo là biến toàn cục), biến này sẽ giúp cho máy nhận biết được là trên màn hình chính các ô đều đang có ảnh.
                 . Còn nếu ArraySaveRect.size() khác 0 thì ta sẽ random một số ngẫu nhiên phạm vi từ 0 đến ArraySaveRect.size(), rồi chuyển nó từ số được random
                 về tọa độ bằng phép tính : đối với tung độ:StartHeight+line*HeightABox+line*Space
                                         đối với hoành độ:StartWidth+column*WidthABox+column*Space
@@ -49,38 +49,40 @@
                 Sau đó lưu tọa độ ảnh mới được sinh ra vào ArrBoardMain với thành phần đầu tiên là tọa độ còn thành phần thứ hai là imageX[0] tức là ảnh chứa hình số 2
             ->hàm kiểm tra xem có di chuyển được không và cho các ảnh di chuyển trong bảng mà không bị lọt ra ngoài :bool CanMove(int i,int j,int NextI, int NextJ)
                 (). Khi nhấn phím để di chuyển, vị trí tiếp theo các ô cần tới mang tọa độ NextI NextJ. Kiểm tra xem NextI NextJ có phải tọa độ có trong bảng hay không,
-                nếu ở ngoài bảng trả về giá trị false còn ngược lại thì trả về giá trị true.
+                nếu ở ngoài bảng trả về giá trị false còn ngược lại thì trả về giá trị true
             ->hàm void Endgame() dùng để soát điều kiện endgame, điều kiện end game ở đây là: khi có đủ ảnh cho 16 ô, các ô không có ô nào liền cạnh hay liền trên hoặc
             liền dưới giống với ảnh ô đó đang chứa, tức là không còn khả năng cộng, và thế là cũng không có khả năng di chuyển tiếp thì hiện màn hình end game, hoặc 
-            người chơi thật sự thắng game, chỉ cần hiện ra ảnh 2048 thì sẽ thắng trò chơi.
+            người chơi thật sự thắng game, chỉ cần hiện ra ảnh 2048 thì sẽ thắng trò chơi
 
         + Di chuyển trong game:
-        ở đây có một khóa key, khóa key sẽ giúp cho sau khi nhấn enter vào màn hình chính thì sau khi nhấn enter lần nữa không bị lặp lại hành động đó.
+        ở đây có một khóa key, khóa key sẽ giúp cho sau khi nhấn enter vào màn hình chính thì sau khi nhấn enter lần nữa không bị lặp lại hành động đó
             -> Di chuyển xuống:
-                Khi nguời chơi ấn phím down trên bàn phím, soát tung độ từ lớn nhất về thấp nhất, hoành độ từ thấp nhất đến lớn nhất.
+                Khi nguời chơi ấn phím down trên bàn phím, soát tung độ từ lớn nhất về thấp nhất, hoành độ từ thấp nhất đến lớn nhất
                 Kiểm tra xem ô phía dưới có nằm trong tọa độ bảng hay không, nếu không thì không thực hiện tiếp của ô đó, nếu có thì kiểm tra xem ô phía dưới đó
                 có ảnh hay không, nếu không thì di chuyển xuống, nếu có thì lại xem xem nó ảnh đó có giống với nó hay không( kiểm tra khả năng cộng), nếu có thì thực hiện
                 kiểm tra xem hai ô đó đồng thời cùng mang ảnh là ảnh mang số gì(dựa vào địa chỉ được lưu trong danh sách path), gán cho cả hai ảnh đó về NULL,ảnh của
                 ô mang vị trí lúc chưa di chuyển được tăng lên thêm một nấc( ví dụ, hai vị trí mang ảnh số 2 tức là tương ứng path[0], khi di chuyển được cộng lại, thì
                 được xét trước sẽ mang ảnh path[0+1] tức là ảnh số 4)
-                Sinh số ngẫu nhiên bằng hàm generateUnoccupiedPostion();
+                Sinh số ngẫu nhiên bằng hàm generateUnoccupiedPostion()
             -> Các di chuyển Up,Right, Left cũng có cơ chế khá tương tự với Down
         
 # 3.Mô tả các chức năng đã cài đặt, kèm video minh họa (chèn link video youtube)
-
-	Phím Enter có chức năng khởi động lại nhạc nền.
-	Di chuyển lên, xuống,sang trái,sang phải
+	Sử dụng bàn phím:
+	Phím Enter nhấn lần đầu tiên có chức năng chuyển từ background ban đầu sang background bảng chính để chơi game và khởi động nhạc nền.
+	Sau đó thì : phím Enter có chức năng khởi động lại nhạc nền
+	Di chuyển lên, xuống,sang trái,sang phải để chơi.
 ## Link video: https://youtu.be/RzW8A736RGU
 # 4.Các kỹ thuật lập trình được sử dụng trong chương trình (mảng, con trỏ, cấu trúc, lớp, đồ họa ...)
 
 	Kĩ thuật được dùng nhiều nhất trong bài là sử dụng mảng, bởi đa phần chỉ cần liên kết ảnh với tọa độ để kiểm tra và sử dụng các hàm.
-	Bài tập được sử dụng SDL2, sử dụng ảnh và âm thanh.
-	Trong bài có sử dụng khá nhiều pair để tạo dây xích kết nối giữa tọa độ và ảnh.
+	Trong bài có sử dụng cả mảng hai chiều và mảng một chiều, mảng động và mảng tĩnh
+	Bài tập được sử dụng SDL2, sử dụng ảnh và âm thanh
+	Trong bài có sử dụng khá nhiều pair để tạo dây xích kết nối giữa tọa độ và ảnh
 # 5.Kết luận, hướng phát triển và các điều tâm đắc rút ra được sau khi hoàn thiện chương trình
 	Tâm đắc:
-	+Tự mình code cơ chế
-	+Hiểu thêm một số cách hoạt động và bản chất của một số hàm SDL2
+	+Tự mình code cơ chế.
+	+Hiểu thêm một số cách hoạt động và bản chất của một số hàm SDL2.
 	Hướng phát triển:
-	+Thêm một số tính năng mới cho game
-	+kéo thả kích thước cửa sổ
+	+Thêm một số tính năng mới cho game.
+	+kéo thả kích thước cửa sổ.
 
