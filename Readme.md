@@ -68,19 +68,19 @@
         
 # 3.Mô tả các chức năng đã cài đặt, kèm video minh họa (chèn link video youtube)
 
-phím Enter có chức năng khởi động lại nhạc nền.
-Di chuyển lên, xuống,sang trái,sang phải
+	Phím Enter có chức năng khởi động lại nhạc nền.
+	Di chuyển lên, xuống,sang trái,sang phải
 ## Link video: https://youtu.be/RzW8A736RGU
 # 4.Các kỹ thuật lập trình được sử dụng trong chương trình (mảng, con trỏ, cấu trúc, lớp, đồ họa ...)
 
-Kĩ thuật được dùng nhiều nhất trong bài là sử dụng mảng, bởi đa phần chỉ cần liên kết ảnh với tọa độ để kiểm tra và sử dụng các hàm.
-Bài tập được sử dụng SDL2, sử dụng ảnh và âm thanh.
-Trong bài có sử dụng khá nhiều pair để tạo dây xích kết nối giữa tọa độ và ảnh.
+	Kĩ thuật được dùng nhiều nhất trong bài là sử dụng mảng, bởi đa phần chỉ cần liên kết ảnh với tọa độ để kiểm tra và sử dụng các hàm.
+	Bài tập được sử dụng SDL2, sử dụng ảnh và âm thanh.
+	Trong bài có sử dụng khá nhiều pair để tạo dây xích kết nối giữa tọa độ và ảnh.
 # 5.Kết luận, hướng phát triển và các điều tâm đắc rút ra được sau khi hoàn thiện chương trình
-Tâm đắc:
-+Tự mình code cơ chế
-+Hiểu thêm một số cách hoạt động và bản chất của một số hàm SDL2
-Hướng phát triển:
-+Thêm một số tính năng mới cho game
-+kéo thả kích thước cửa sổ
+	Tâm đắc:
+	+Tự mình code cơ chế
+	+Hiểu thêm một số cách hoạt động và bản chất của một số hàm SDL2
+	Hướng phát triển:
+	+Thêm một số tính năng mới cho game
+	+kéo thả kích thước cửa sổ
 
