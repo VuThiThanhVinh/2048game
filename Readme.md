@@ -10,7 +10,7 @@
 # 2.Mô tả chung về trò chơi, các ý tưởng chính
 
 ## Về cách chơi:
-    màn hình menu hiện ra, nhấn Enter để chuyển đến phần màn hình bảng chính để chơi
+    Màn hình menu hiện ra, nhấn Enter để chuyển đến phần màn hình bảng chính để chơi
     Sau khi nhấn Enter để đến màn hình chính, nhạc nền sẽ được mở lên
     Trong lúc chơi nếu người chơi muốn mở lại nhạc từ đầu thì có thể nhấn phím Enter 
     để phát lại nhạc từ đầu.
@@ -60,9 +60,9 @@
                 Khi nguời chơi ấn phím down trên bàn phím, soát tung độ từ lớn nhất về thấp nhất, hoành độ từ thấp nhất đến lớn nhất
                 Kiểm tra xem ô phía dưới có nằm trong tọa độ bảng hay không, nếu không thì không thực hiện tiếp của ô đó, nếu có thì kiểm tra xem ô phía dưới đó
                 có ảnh hay không, nếu không thì di chuyển xuống, nếu có thì lại xem xem nó ảnh đó có giống với nó hay không( kiểm tra khả năng cộng), nếu có thì thực hiện
-                kiểm tra xem hai ô đó đồng thời cùng mang ảnh là ảnh mang số gì(dựa vào địa chỉ được lưu trong danh sách path), gán cho cả hai ảnh đó về NULL,ảnh của
+                Kiểm tra xem hai ô đó đồng thời cùng mang ảnh là ảnh mang số gì(dựa vào địa chỉ được lưu trong danh sách path), gán cho cả hai ảnh đó về NULL,ảnh của
                 ô mang vị trí lúc chưa di chuyển được tăng lên thêm một nấc( ví dụ, hai vị trí mang ảnh số 2 tức là tương ứng path[0], khi di chuyển được cộng lại, thì
-                được xét trước sẽ mang ảnh path[0+1] tức là ảnh số 4)
+                được xét trước sẽ mang ảnh path[0+1] tức là ảnh số 4) và tọa độ của ảnh chứa tọa độ NextI, Next J được trả về 0 0.
                 Sinh số ngẫu nhiên bằng hàm generateUnoccupiedPostion()
             -> Các di chuyển Up,Right, Left cũng có cơ chế khá tương tự với Down
         
