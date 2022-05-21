@@ -9,7 +9,7 @@ Bước 6: nhập tiếp lệnh: .\main.exe rồi Enter để chạy chương tr
 
 # 2.Mô tả chung về trò chơi, các ý tưởng chính
 
-về cách chơi:
+## Về cách chơi:
     màn hình menu hiện ra, nhấn Enter để chuyển đến phần màn hình bảng chính để chơi
     Sau khi nhấn Enter để đến màn hình chính, nhạc nền sẽ được mở lên
     Trong lúc chơi nếu người chơi muốn mở lại nhạc từ đầu thì có thể nhấn phím Enter 
@@ -18,8 +18,9 @@ về cách chơi:
     ngẫu nhiên mới sẽ được sinh ra
     Game sẽ kết thúc khi người chơi không còn có thể di chuyển ảnh cộng vào nhau hoặc khi
     ảnh 2048 xuất hiện.
-Các ý tưởng chính:
+## Các ý tưởng chính:
     -Mở thiết lập cửa sổ, thiết lập các chức năng load ảnh và sử dụng nhạc( tham khảo tại https://lazyfoo.net/tutorials/SDL/index.php)
+
     -Đầu tiên sẽ load ảnh BackgroundMenu lên, thêm chức năng nhấn Enter để chuyển đến BackgroundMain là nền chính trò chơi và khởi động nhạc nền
     -Đi vào cơ chế game:
         + Đầu tiên:
