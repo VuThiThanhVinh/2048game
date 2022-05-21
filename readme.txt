@@ -1,4 +1,4 @@
-#1.Hướng dẫn cài đặt:
+# 1.Hướng dẫn cài đặt:
 
 Bước 1: fork repo này về github cá nhân
 Bước 2:mở command port tại tệp muốn lưu code tải về
@@ -7,7 +7,7 @@ Bước 4: mở folder code vừa được tải về bằng phần mềm
 Bước 5: New Terminal, nhập vào Terminal lệnh: make
 Bước 6: nhập tiếp lệnh: .\main.exe rồi Enter để chạy chương trình
 
-#2.Mô tả chung về trò chơi, các ý tưởng chính
+# 2.Mô tả chung về trò chơi, các ý tưởng chính
 
 về cách chơi:
     màn hình menu hiện ra, nhấn Enter để chuyển đến phần màn hình bảng chính để chơi
@@ -65,17 +65,17 @@ Các ý tưởng chính:
                 Sinh số ngẫu nhiên bằng hàm generateUnoccupiedPostion();
             -> Các di chuyển Up,Right, Left cũng có cơ chế khá tương tự với Down
         
-#3.Mô tả các chức năng đã cài đặt, kèm video minh họa (chèn link video youtube)
+# 3.Mô tả các chức năng đã cài đặt, kèm video minh họa (chèn link video youtube)
 
 phím Enter có chức năng khởi động lại nhạc nền.
 di chuyển lên, xuống,sang trái,sang phải
 Link video: https://youtu.be/RzW8A736RGU
-#4.Các kỹ thuật lập trình được sử dụng trong chương trình (mảng, con trỏ, cấu trúc, lớp, đồ họa ...)
+# 4.Các kỹ thuật lập trình được sử dụng trong chương trình (mảng, con trỏ, cấu trúc, lớp, đồ họa ...)
 
 Kĩ thuật được dùng nhiều nhất trong bài là sử dụng mảng, bởi đa phần chỉ cần liên kết ảnh với tọa độ để kiểm tra và sử dụng các hàm.
 Bài tập được sử dụng SDL2, sử dụng ảnh và âm thanh.
 Trong bài có sử dụng khá nhiều pair để tạo dây xích kết nối giữa tọa độ và ảnh.
-#5.Kết luận, hướng phát triển và các điều tâm đắc rút ra được sau khi hoàn thiện chương trình
+# 5.Kết luận, hướng phát triển và các điều tâm đắc rút ra được sau khi hoàn thiện chương trình
 Tâm đắc:
 +Tự mình code cơ chế
 +Hiểu thêm một số cách hoạt động và bản chất của một số hàm SDL2
