@@ -3,8 +3,7 @@
 #include<SDL2/SDL_ttf.h>
 using namespace std;
 bool quit=false;
-int director;
-//luu tru vi tri moi sinh so ngau nhien
+
 vector <pair<SDL_Rect,SDL_Surface*>> ArrBoardMain;
 
 // toa do cac anh da duoc sinh ngau nhien
@@ -60,7 +59,7 @@ void generateUnoccupiedPostion()
 
             }
          if(!check1){ arr[b][j].second=NULL;
-            //cout<<"("<<b<<","<<j<<"),";
+            
             pair<int,int> save;
             save.first=b;
             save.second=j;
@@ -70,7 +69,7 @@ void generateUnoccupiedPostion()
                                     
         }
     }  
-   // cout<<ArraySaveRect.size()-1<<endl;
+   
     if(ArraySaveRect.size()==0) endgame=true;
     else{
         endgame=false;
@@ -93,28 +92,12 @@ void generateUnoccupiedPostion()
              z.first=v;
             z.second=imageX[0];
              ArrBoardMain.push_back(z);
-             
-        
-            
-     
-        //cout<<line<<" "<<column<<endl;
-   
-    //return make_pair(line,column);
+
     }
 }
 bool CanMove(int i,int j,int NextI, int NextJ)
 {   
-    //tim kiem anh o toa do NextI NextJ cua ArrBoardMain
-    int find=-1;
-    for(int a=0;a<arrboard.size();a++)
-    {
-       if(arrboard[a].y==NextJ&&arrboard[a].x==NextI)
-       {
-           find=(NextI-StartWidth)/(Space+WidthABox);
-           
-         
-       }
-    }
+
    for(int a=0;a<arrboard.size();a++){
        if(arrboard[a].x==i&&arrboard[a].y==j){
            if(NextI<StartWidth||NextJ<StartHeight||NextI>(StartWidth+3*(Space+WidthABox))||NextJ>(StartHeight+3*(Space+HeightABox))) 
@@ -152,7 +135,7 @@ void Endgame()
     {
        backgroundendgame=true;
        
-       // SDL_BlitSurface(BackgroundEndgame,NULL,screen_surface,NULL);
+    
 
     }
     for(int i=0;i<arrboard.size();i++)

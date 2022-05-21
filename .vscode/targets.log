@@ -8,7 +8,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This program built for i386-pc-mingw32
  
 
-# Make data base, printed on Fri May 20 22:55:53 2022
+# Make data base, printed on Sat May 21 08:21:07 2022
 
 # Variables
 
@@ -57,7 +57,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-e048f951-fdf7-45af-9fcc-f200f48e7dcf-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-6f81eb51-4c19-4e82-a479-62e6bada6706-sock
 # environment
 VSCODE_CWD = C:\Users\Vu Thi Thanh VINH\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -81,8 +81,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pip 
-e\crashpad_16812_CEJAPFPGKJCHNVNZ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12236_VFWEBMYFTSXABUWO
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -186,9 +185,10 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 23
 # environment
-FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+FPS_BROWSER_APP_PROFILE_STRING = Interne 
+t Explorer
 # environment
-VSCODE_PID = 16812
+VSCODE_PID = 12236
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-D3RJER2
 # variable set hash-table stats:
@@ -203,7 +203,7 @@ USERDOMAIN_ROAMINGPROFILE = DESKTOP-D3RJER2
 # : could not be stat'd.
 # C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1622173337): 30 files, no impossibilities.
 # C:\Windows\System32\Wbem (key C:/Windows/System32/Wbem, mtime 1647115794): 154 files, no impossibilities.
-# . (key c:/Users/Vu Thi Thanh VINH/Documents/save vscode/banthu2048so4, mtime 1653062142): 51 files, no impossibilities.
+# . (key c:/Users/Vu Thi Thanh VINH/Documents/save vscode/banthu2048so4, mtime 1653081333): 30 files, no impossibilities.
 # C:\Users\Vu Thi Thanh VINH\Documents\save vscode\library\mingw64\bin (key C:/Users/Vu Thi Thanh VINH/Documents/save vscode/library/mingw64/bin, mtime 1521554570): 59 files, no impossibilities.
 # C:\Users\Vu Thi Thanh VINH\AppData\Local\Microsoft\WindowsApps (key C:/Users/Vu Thi Thanh VINH/AppData/Local/Microsoft/WindowsApps, mtime 1651381414): 17 files, no impossibilities.
 # C:\Program Files\dotnet\ (key C:/Program Files/dotnet/, mtime 1649670165): 8 files, no impossibilities.
@@ -212,12 +212,12 @@ USERDOMAIN_ROAMINGPROFILE = DESKTOP-D3RJER2
 # C:\Windows (key C:/Windows, mtime 1652945083): 109 files, no impossibilities.
 # C:\Users\Vu Thi Thanh VINH\Desktop\cmake-3.23.0-rc4-windows-x86_64\cmake-3.23.0-rc4-windows-x86_64\bin (key C:/Users/Vu Thi Thanh VINH/Desktop/cmake-3.23.0-rc4-windows-x86_64/cmake-3.23.0-rc4-windows-x86_64/bin, mtime 1647608466): 7 files, no impossibilities.
 # C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1645760856): 8 files, no impossibilities.
-# C:\Windows\system32 (key C:/Windows/system32, mtime 1653034843): 2850 files, no impossibilities.
+# C:\Windows\system32 (key C:/Windows/system32, mtime 1653073189): 2850 files, no impossibilities.
 # C:\Program Files (x86)\Dev-Cpp\MinGW64\bin (key C:/Program Files (x86)/Dev-Cpp/MinGW64/bin, mtime 1633234903): 63 files, no impossibilities.
 # C:\Users\Vu Thi Thanh VINH\AppData\Local\Programs\Microsoft VS Code\bin (key C:/Users/Vu Thi Thanh VINH/AppData/Local/Programs/Microsoft VS Code/bin, mtime 1652928622): 4 files, no impossibilities.
 # C:\Program Files (x86)\GnuWin32\bin (key C:/Program Files (x86)/GnuWin32/bin, mtime 1647744841): 5 files, no impossibilities.
 
-# 3402 files, no impossibilities in 16 directories.
+# 3381 files, no impossibilities in 16 directories.
 
 # Implicit Rules
 
@@ -251,8 +251,7 @@ all:
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/10=10%
 #  commands to execute (from `makefile', line 3):
-	g++ -Isrc/include -Lsrc/lib -o main main.cpp board.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL 
-2_mixer -lSDL2_ttf
+	g++ -Isrc/include -Lsrc/lib -o main main.cpp board.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
 	
 
 # Not a target:
@@ -264,7 +263,7 @@ all:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-20 17:37:00
+#  Last modified 2022-05-21 00:58:33
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -274,27 +273,11 @@ makefile:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
-#  File has not been updated.
-
-run:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `makefile', line 5):
-	chmod +x main
-	./main
-	
-
-clean:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `makefile', line 8):
-	rm -rf *.o main
-	
+#  File has not b 
+een updated.
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/19=0%
+# Load=4/1024=0%, Rehash=0, Collisions=0/17=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -306,6 +289,6 @@ clean:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri May 20 22:55:53 2022
+# Finished Make data base on Sat May 21 08:21:07 2022
 
  

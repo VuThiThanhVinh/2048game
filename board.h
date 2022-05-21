@@ -9,6 +9,7 @@
 #include <Windows.h>
 #include<SDL2/SDL_mixer.h>
 using namespace std;
+
 const int StartWidth=39;
 const int StartHeight=236;
 const int WidthABox= 78;
@@ -18,10 +19,10 @@ const int SCREEN_WIDTH= 437;
 const int SCREEN_HEIGHT=700;
 //danh sach cac anh
 string path[]={
-    "2_image.png","4_image.png","8_image.png",
-    "16_image.png","32_image.png","64_image.png",
-    "128_image.png","256_image.png","512_image.png",
-    "1024_image.png","2048_image.png"
+    "media/2_image.png","media/4_image.png","media/8_image.png",
+    "media/16_image.png","media/32_image.png","media/64_image.png",
+    "media/128_image.png","media/256_image.png","media/512_image.png",
+    "media/1024_image.png","media/2048_image.png"
 };
 
 // anh tai cac o trong bang
@@ -33,6 +34,7 @@ NULL,NULL,NULL,NULL};
 
 // toa do cac o trong bang
 SDL_Rect Board[4][4];
+
 void SetBoard()
 {
     
@@ -159,13 +161,13 @@ bool loadMedia(){
     bool success=true;
 
      //tai be mat mac dinh( man hinh menu)
-    BackgroundMenu=LoadImage("BackgroundMenu_image.png");
+    BackgroundMenu=LoadImage("media/BackgroundMenu_image.png");
     
     //tai be mat main
-    BackgroundMain=LoadImage("main_image.png");
+    BackgroundMain=LoadImage("media/main_image.png");
 
     //tai len anh endgame
-    BackgroundEndgame=LoadImage("endgame.png");
+    BackgroundEndgame=LoadImage("media/endgame.png");
 
   for(int i=0;i<11;i++) imageX[i]=LoadImage(path[i]);
   
@@ -175,22 +177,16 @@ bool loadMedia(){
     success=false;
     }
  //Load music
-    gMusic = Mix_LoadMUS( "KokuhakuNoYoru-Ayasa-5922559.wav" );
+    gMusic = Mix_LoadMUS( "media/KokuhakuNoYoru-Ayasa-5922559.wav" );
     if( gMusic == NULL )
     {
         printf( "Failed to load beat music! SDL_mixer Error: %s\n", Mix_GetError() );
         success = false;
     }
     
-    // //Load sound effects
-    // gScratch = Mix_LoadWAV( "KokuhakuNoYoru-Ayasa-5922559.wav" );
-    // if( gScratch == NULL )
-    // {
-    //     printf( "Failed to load scratch sound effect! SDL_mixer Error: %s\n", Mix_GetError() );
-    //     success = false;
-    // }
+
     
-    gHigh = Mix_LoadWAV( "ringtonemakerwiz.com-2022-05-20.wav" );
+    gHigh = Mix_LoadWAV( "media/ringtonemakerwiz.com-2022-05-20.wav" );
     if( gHigh == NULL )
     {
         printf( "Failed to load high sound effect! SDL_mixer Error: %s\n", Mix_GetError() );
@@ -231,5 +227,6 @@ Mix_Quit();
 IMG_Quit();
 SDL_Quit();
 }
+
 
 #endif
