@@ -1,5 +1,5 @@
 # 1.Hướng dẫn cài đặt:
-
+## Dưới đây là cách cài đặt:
  Bước 1: fork repo này về github cá nhân 
  Bước 2:mở command port tại tệp muốn lưu code tải về
  Bước 3: clone code về máy bằng dòng lệnh: git clone https://github.com/[tên_github_cá_nhân]/Sliding_Puzzle
