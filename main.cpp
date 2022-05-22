@@ -539,8 +539,8 @@ void PlayGame(){
                 SDL_BlitSurface(load_image,NULL,screen_surface,NULL);
                
 
-                if(check&&count_enter==1){
-                generateUnoccupiedPostion();
+                if(check){
+                if(count_enter==1)generateUnoccupiedPostion();
                    Mix_PlayMusic( gMusic, -1 );
                 check=false;
                 }

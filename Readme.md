@@ -12,6 +12,7 @@
 ## Về cách chơi:
     Màn hình menu hiện ra, nhấn Enter để chuyển đến phần màn hình bảng chính để chơi
     Sau khi nhấn Enter để đến màn hình chính, nhạc nền sẽ được mở lên
+    Sau đó phím Enter có chức năng khởi động lại nhạc nền
     Game được chơi theo các bước nhấn phím, mỗi lần nhấn phím lên/xuống/trái/phải thì ảnh 
     ngẫu nhiên mới sẽ được sinh ra
     Game sẽ kết thúc khi người chơi không còn có thể di chuyển ảnh cộng vào nhau hoặc khi
@@ -20,6 +21,7 @@
     -Mở thiết lập cửa sổ, thiết lập các chức năng load ảnh và sử dụng nhạc( tham khảo tại https://lazyfoo.net/tutorials/SDL/index.php)
 
     -Đầu tiên sẽ load ảnh BackgroundMenu lên, thêm chức năng nhấn Enter để chuyển đến BackgroundMain là nền chính trò chơi và khởi động nhạc nền
+    Phím Enter được dùng để khởi động lại nhạc nền.
     -Đi vào cơ chế game:
         + Đầu tiên:
             * Khai báo các hằng số const bao gồm StartWidth,StartHeight,WidthABox,HeightABox,Space
