@@ -12,8 +12,6 @@
 ## Về cách chơi:
     Màn hình menu hiện ra, nhấn Enter để chuyển đến phần màn hình bảng chính để chơi
     Sau khi nhấn Enter để đến màn hình chính, nhạc nền sẽ được mở lên
-    Trong lúc chơi nếu người chơi muốn mở lại nhạc từ đầu thì có thể nhấn phím Enter 
-    để phát lại nhạc từ đầu.
     Game được chơi theo các bước nhấn phím, mỗi lần nhấn phím lên/xuống/trái/phải thì ảnh 
     ngẫu nhiên mới sẽ được sinh ra
     Game sẽ kết thúc khi người chơi không còn có thể di chuyển ảnh cộng vào nhau hoặc khi
@@ -69,7 +67,6 @@
 # 3.Mô tả các chức năng đã cài đặt, kèm video minh họa (chèn link video youtube)
 	Sử dụng bàn phím:
 	Phím Enter nhấn lần đầu tiên có chức năng chuyển từ background ban đầu sang background bảng chính để chơi game và khởi động nhạc nền.
-	Sau đó thì : phím Enter có chức năng khởi động lại nhạc nền
 	Di chuyển lên, xuống,sang trái,sang phải để chơi.
 ## Link video: https://youtu.be/RzW8A736RGU
 # 4.Các kỹ thuật lập trình được sử dụng trong chương trình (mảng, con trỏ, cấu trúc, lớp, đồ họa ...)

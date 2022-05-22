@@ -19,9 +19,14 @@ bool check=false;
 bool test=true;
 // bien dung de check dieu kien end game la co du 16 anh tren cac o hay chua
 bool endgame=false;
+//khoa sinh so ngau nhien cua enter
+int count_enter=0;
 
-bool backgroundendgame=false;
+//bien dem so o con trong
 int count;
+//
+bool backgroundendgame=false;
+
 int checkscreen=0;
 //khoa dung de khoa anh sinh ngau nhien luc mo chuong trinh
 bool key=true;
@@ -110,41 +115,7 @@ bool CanMove(int i,int j,int NextI, int NextJ)
    return true;
 }
 
-void Endgame()
-{
-    int count=0;
-    backgroundendgame=false;
-    bool checkallboard= false;
-    for(int i=0;i<arrboard.size();i++)
-    {
-        checkallboard=false;
-        for(int j=0;j<arrboard.size();j++){
-           
-           if((arrboard[i].x==arrboard[j].x+Space+WidthABox&&arrboard[i].y==arrboard[j].y
-           || arrboard[i].x==arrboard[j].x-Space-WidthABox&&arrboard[i].y==arrboard[j].y
-           ||arrboard[i].x==arrboard[j].x&&arrboard[i].y==arrboard[j].y+Space+HeightABox
-           ||arrboard[i].x==arrboard[j].x&&arrboard[i].y==arrboard[j].y-Space-HeightABox)
-           && arrboard[i].x!=0&&arrboard[i].y!=0&&arrboard[j].x!=0&&arrboard[j].y!=0
-           &&ArrBoardMain[i].second==ArrBoardMain[j].second
-           )
-          count++;
 
-        }
-
-    }
-  
-    //cout<<count<<endl;
-    if(count==0)
-    {
-       backgroundendgame=true;
-       
-    
-
-    }
-    for(int i=0;i<arrboard.size();i++)
-    if(ArrBoardMain[i].second==imageX[10]) win=true;
-    
-}
 void Move_Down(){
                             if(!key){
                              for(int j=StartHeight+3*(Space+HeightABox);j>=StartHeight;j-=Space+HeightABox)
@@ -483,6 +454,38 @@ if(!key){
                              
                             }
 }
+void Endgame()
+{
+    int count=0;
+    backgroundendgame=false;
+    bool checkallboard= false;
+    for(int i=0;i<arrboard.size();i++)
+    {
+        checkallboard=false;
+        for(int j=0;j<arrboard.size();j++){
+           
+           if((arrboard[i].x==arrboard[j].x+Space+WidthABox&&arrboard[i].y==arrboard[j].y
+           || arrboard[i].x==arrboard[j].x-Space-WidthABox&&arrboard[i].y==arrboard[j].y
+           ||arrboard[i].x==arrboard[j].x&&arrboard[i].y==arrboard[j].y+Space+HeightABox
+           ||arrboard[i].x==arrboard[j].x&&arrboard[i].y==arrboard[j].y-Space-HeightABox)
+           && arrboard[i].x!=0&&arrboard[i].y!=0&&arrboard[j].x!=0&&arrboard[j].y!=0
+           &&ArrBoardMain[i].second==ArrBoardMain[j].second
+           )
+          count++;
+
+        }
+
+    }
+  
+    //cout<<count<<endl;
+    if(count==0)
+    {
+       backgroundendgame=true;
+    }
+    for(int i=0;i<arrboard.size();i++)
+    if(ArrBoardMain[i].second==imageX[10]) win=true;
+    
+}
 void PlayGame(){
 
                 //xu ly cac su kien dang doi, tra ve 1 neu co su kien dang cho xu ly, tra ve 0 neu khong co su kien dang can duoc xu ly
@@ -502,6 +505,7 @@ void PlayGame(){
                                 load_image=BackgroundMain;
                                 check=true;
                                 key=false;
+                                count_enter++;
                                
                             break;
                             
@@ -523,30 +527,7 @@ void PlayGame(){
                             Mix_PlayChannel( -1, gHigh, 0 );
                             Move_Left();
                             break;
-                             case SDLK_9:
-                            //If there is no music playing
-                            if( Mix_PlayingMusic() == 0 )
-                            {
-                                //Play the music
-                                Mix_PlayMusic( gMusic, -1 );
-                            }
-                            //If music is being played
-                            else
-                            {
-                                //If the music is paused
-                                if( Mix_PausedMusic() == 1 )
-                                {
-                                    //Resume the music
-                                    Mix_ResumeMusic();
-                                }
-                                //If the music is playing
-                                else
-                                {
-                                    //Pause the music
-                                    Mix_PauseMusic();
-                                }
-                            }
-                            break;
+                            
                             
                             
                         }
@@ -554,11 +535,11 @@ void PlayGame(){
                 
                 }
                  
-                //Mix_PlayChannel( -1, gScratch, 0 );
+                
                 SDL_BlitSurface(load_image,NULL,screen_surface,NULL);
                
 
-                if(check){
+                if(check&&count_enter==1){
                 generateUnoccupiedPostion();
                    Mix_PlayMusic( gMusic, -1 );
                 check=false;
@@ -576,6 +557,7 @@ void PlayGame(){
                 SDL_UpdateWindowSurface(window);
             
 }
+
 int main(int argc, char* args[] ) 
 {
  
