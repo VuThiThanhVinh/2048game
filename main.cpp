@@ -1,9 +1,9 @@
 #include<vector>
 #include "board.h"
-#include<SDL2/SDL_ttf.h>
+#include<math.h>
 using namespace std;
 bool quit=false;
-
+int mark_value;
 vector <pair<SDL_Rect,SDL_Surface*>> ArrBoardMain;
 
 // toa do cac anh da duoc sinh ngau nhien
@@ -114,7 +114,20 @@ bool CanMove(int i,int j,int NextI, int NextJ)
    }
    return true;
 }
+void ShowMark(){
+    TextObject mark_game;
+    mark_game.SetColor(TextObject::RED_TEXT);
+     //Show mark value to screen
+     string val_str_mark = to_string(mark_value);
 
+     string strMark("SCORE: ");
+     strMark += val_str_mark;
+
+      mark_game.SetText(strMark);
+                                                    
+     mark_game.CreateGameText(g_font_text, BackgroundEndgame);
+
+}
 
 void Move_Down(){
                             if(!key){
@@ -184,6 +197,8 @@ void Move_Down(){
                                                    
                                                 
                                                   ArrBoardMain[m1].second=imageX[m3+1];
+                                                  mark_value+=pow(2,m3+2);
+                                                  
                                                   arrboard[m2].x=0;
                                                   arrboard[m2].y=0;
                                                   arrboard[m1].y+=Space+HeightABox;
@@ -270,6 +285,7 @@ void Move_Up(){
                                                  ArrBoardMain[m2].second=NULL;
                                             
                                                   ArrBoardMain[m1].second=imageX[m3+1];
+                                                  mark_value+=pow(2,m3+2);
                                                   arrboard[m2].x=0;
                                                   arrboard[m2].y=0;
                                                   arrboard[m1].y-=Space+HeightABox;
@@ -352,6 +368,7 @@ if(!key){
                                                  ArrBoardMain[m2].second=NULL;
                                             
                                                   ArrBoardMain[m1].second=imageX[m3+1];
+                                                  mark_value+=pow(2,m3+2);
                                                   arrboard[m2].x=0;
                                                   arrboard[m2].y=0;
                                                   arrboard[m1].x+=Space+WidthABox;
@@ -436,6 +453,7 @@ if(!key){
                                                  ArrBoardMain[m2].second=NULL;
                                             
                                                   ArrBoardMain[m1].second=imageX[m3+1];
+                                                  mark_value+=pow(2,m3+2);
                                                   arrboard[m2].x=0;
                                                   arrboard[m2].y=0;
                                                   arrboard[m1].x-=Space+WidthABox;
@@ -535,7 +553,7 @@ void PlayGame(){
                 
                 }
                  
-                
+        
                 SDL_BlitSurface(load_image,NULL,screen_surface,NULL);
                
 
@@ -553,6 +571,7 @@ void PlayGame(){
                 Endgame();
                 if((endgame&&backgroundendgame)||win==true)  
                         SDL_BlitSurface(BackgroundEndgame,NULL,screen_surface,NULL);
+                        
                   //cap nhat be mat
                 SDL_UpdateWindowSurface(window);
             
@@ -564,6 +583,7 @@ int main(int argc, char* args[] )
 
     // khoi tao SDL
 
+  
     SetArr();
     
     if(!init())
@@ -583,11 +603,38 @@ int main(int argc, char* args[] )
              quit=false;
             //dat be mat hien tai mac dinh la background menu
             load_image=BackgroundMenu;
-       
+             mark_value=0;
             while(!quit)
             {
             
             PlayGame();
+              
+                 
+               
+                SDL_BlitSurface(load_image,NULL,screen_surface,NULL);
+                
+ 
+                if(check){
+                if(count_enter==1)generateUnoccupiedPostion();
+                   Mix_PlayMusic( gMusic, -1 );
+                check=false;
+                
+                }
+                      
+               for(int i=0;i<arrboard.size();i++){
+                   if(arrboard[i].x!=0&&arrboard[i].y!=0)
+                SDL_BlitSurface(ArrBoardMain[i].second,NULL,screen_surface,&arrboard[i]);
+                
+               }
+               
+                Endgame();
+                if((endgame&&backgroundendgame)||win==true)  {
+                    SDL_BlitSurface(BackgroundEndgame,NULL,screen_surface,NULL);
+                    ShowMark();
+                }
+                        
+                  //cap nhat be mat
+                SDL_UpdateWindowSurface(window);
             
             }
 

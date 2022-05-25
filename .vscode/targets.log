@@ -8,7 +8,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This program built for i386-pc-mingw32
  
 
-# Make data base, printed on Sun May 22 16:21:23 2022
+# Make data base, printed on Wed May 25 18:21:01 2022
 
 # Variables
 
@@ -57,7 +57,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-e78fa717-ca4b-41dd-8185-1b7acfe16ce0-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-ca5c89c8-c316-49f4-af44-6ba13d2cbb64-sock
 # environment
 VSCODE_CWD = C:\Users\Vu Thi Thanh VINH\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -81,7 +81,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_6192_UJOKJQOTMWVPVRHW
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12984_PYLIFIOAIZEJVTNO
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -157,8 +157,7 @@ SYSTEMROOT = C:\Windows
 # automatic
 +F = $(notdir $+)
 # environment
-APPDATA = C:\Users\Vu Thi Thanh VINH\AppData\Roamin 
-g
+APPDATA = C:\Users\Vu Thi Thanh VINH\AppData\Roaming
 # environment
 TEMP = C:\Users\VUTHIT~1\AppData\Local\Temp
 # environment
@@ -187,8 +186,9 @@ LANG = C
 PROCESSOR_LEVEL = 23
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
-# environment
-VSCODE_PID = 6192
+# enviro 
+nment
+VSCODE_PID = 12984
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-D3RJER2
 # variable set hash-table stats:
@@ -203,16 +203,16 @@ USERDOMAIN_ROAMINGPROFILE = DESKTOP-D3RJER2
 # : could not be stat'd.
 # C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1622173337): 30 files, no impossibilities.
 # C:\Windows\System32\Wbem (key C:/Windows/System32/Wbem, mtime 1647115794): 154 files, no impossibilities.
-# . (key c:/Users/Vu Thi Thanh VINH/Desktop/2048game, mtime 1653211037): 31 files, no impossibilities.
+# . (key c:/Users/Vu Thi Thanh VINH/Desktop/2048game, mtime 1653477638): 33 files, no impossibilities.
 # C:\Users\Vu Thi Thanh VINH\Documents\save vscode\library\mingw64\bin (key C:/Users/Vu Thi Thanh VINH/Documents/save vscode/library/mingw64/bin, mtime 1521554570): 59 files, no impossibilities.
-# C:\Users\Vu Thi Thanh VINH\AppData\Local\Microsoft\WindowsApps (key C:/Users/Vu Thi Thanh VINH/AppData/Local/Microsoft/WindowsApps, mtime 1651381414): 17 files, no impossibilities.
+# C:\Users\Vu Thi Thanh VINH\AppData\Local\Microsoft\WindowsApps (key C:/Users/Vu Thi Thanh VINH/AppData/Local/Microsoft/WindowsApps, mtime 1653447806): 17 files, no impossibilities.
 # C:\Program Files\dotnet\ (key C:/Program Files/dotnet/, mtime 1649670165): 8 files, no impossibilities.
 # C:\Program Files\JetBrains\CLion 2021.3.3\bin (key C:/Program Files/JetBrains/CLion 2021.3.3/bin, mtime 1646310710): 37 files, no impossibilities.
 # C:\Windows\System32\OpenSSH\: could not be stat'd.
-# C:\Windows (key C:/Windows, mtime 1652945083): 109 files, no impossibilities.
+# C:\Windows (key C:/Windows, mtime 1653469733): 107 files, no impossibilities.
 # C:\Users\Vu Thi Thanh VINH\Desktop\cmake-3.23.0-rc4-windows-x86_64\cmake-3.23.0-rc4-windows-x86_64\bin (key C:/Users/Vu Thi Thanh VINH/Desktop/cmake-3.23.0-rc4-windows-x86_64/cmake-3.23.0-rc4-windows-x86_64/bin, mtime 1647608466): 7 files, no impossibilities.
 # C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1645760856): 8 files, no impossibilities.
-# C:\Windows\system32 (key C:/Windows/system32, mtime 1653073189): 2850 files, no impossibilities.
+# C:\Windows\system32 (key C:/Windows/system32, mtime 1653469997): 2850 files, no impossibilities.
 # C:\Program Files (x86)\Dev-Cpp\MinGW64\bin (key C:/Program Files (x86)/Dev-Cpp/MinGW64/bin, mtime 1633234903): 63 files, no impossibilities.
 # C:\Users\Vu Thi Thanh VINH\AppData\Local\Programs\Microsoft VS Code\bin (key C:/Users/Vu Thi Thanh VINH/AppData/Local/Programs/Microsoft VS Code/bin, mtime 1652928622): 4 files, no impossibilities.
 # C:\Program Files (x86)\GnuWin32\bin (key C:/Program Files (x86)/GnuWin32/bin, mtime 1647744841): 5 files, no impossibilities.
@@ -263,7 +263,7 @@ all:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-21 00:58:33
+#  Last modified 2022-05-25 16:11:06
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -288,6 +288,6 @@ makefile:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun May 22 16:21:23 2022
+# Finished Make data base on Wed May 25 18:21:01 2022
 
  

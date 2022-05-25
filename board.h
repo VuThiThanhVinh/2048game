@@ -8,8 +8,9 @@
 #include<string>
 #include <Windows.h>
 #include<SDL2/SDL_mixer.h>
+#include<SDL2/SDL_ttf.h>
 using namespace std;
-
+TTF_Font*g_font_text=NULL;
 const int StartWidth=39;
 const int StartHeight=236;
 const int WidthABox= 78;
@@ -88,6 +89,110 @@ Mix_Music *gMusic = NULL;
 //The sound effects that will be used
 Mix_Chunk *gScratch = NULL;
 Mix_Chunk *gHigh = NULL;
+class BaseObject
+{
+public:
+  BaseObject();
+  ~BaseObject();
+  void Show(SDL_Surface* screen_surface);
+  //bool LoadImg(const char* file_name);
+  SDL_Rect ApplySurface(SDL_Surface* load_image, SDL_Surface* screen_surface, int x, int y);
+  void SetRect(const int& x, const int& y) {rect_.x = x, rect_.y = y;}
+  SDL_Rect GetRect() const {return rect_;}
+  SDL_Surface* GetObject() {return p_object_;}
+protected:
+  SDL_Rect rect_;
+  SDL_Surface* p_object_;
+};
+BaseObject::BaseObject()
+{
+  rect_.x = 0;
+  rect_.y = 0;
+  p_object_ = NULL;
+}
+
+BaseObject::~BaseObject()
+{
+  if (p_object_ != NULL)
+  {
+    SDL_FreeSurface(p_object_);
+  }
+}
+SDL_Rect BaseObject::ApplySurface(SDL_Surface* load_image, SDL_Surface* screen_surface, int x, int y)
+{
+  SDL_Rect offset;
+  offset.x = x;
+  offset.y = y;
+  SDL_BlitSurface(load_image, NULL, screen_surface, &offset);
+
+  return offset;
+}
+void BaseObject::Show(SDL_Surface* screen_surface)
+{
+  if (p_object_ != NULL)
+  {
+    rect_ =  BaseObject::ApplySurface(p_object_, screen_surface, rect_.x, rect_.y);
+  }
+}
+class TextObject : public BaseObject
+{
+public:
+  enum TextColor
+  {
+    RED_TEXT  = 0,
+    WHITE_TEXT = 1,
+    BLACK_TEXT = 2,
+  };
+
+  TextObject()
+{
+  rect_.x = 30;
+  rect_.y = 80;
+  text_color_.r = 255;
+  text_color_.g = 255;
+  text_color_.b = 255;
+}
+ ~TextObject()
+{
+
+}
+ 
+  void SetText(const std::string& text) {str_val_ = text;}
+  void SetColor(const int& type)
+{
+  if (type == RED_TEXT)
+  {
+    SDL_Color color = {255, 0, 0};
+    text_color_ = color;
+  }
+  else if (type == WHITE_TEXT)
+  {
+    SDL_Color color = {255, 255, 255};
+    text_color_ = color;
+  }
+  else
+  {
+    SDL_Color color = {0, 0, 0};
+    text_color_ = color;
+  }
+}
+
+   void CreateGameText (TTF_Font* font, SDL_Surface* load_image)
+{
+  p_object_ = TTF_RenderText_Solid(font, str_val_.c_str(), text_color_);
+  Show(load_image);
+}
+private:
+
+std::string str_val_;
+SDL_Color text_color_;
+};
+
+
+
+
+
+
 
 bool init()
 {
@@ -129,7 +234,9 @@ else{
             }
         }
     }
-
+    if(TTF_Init()<0) return false;
+    g_font_text=TTF_OpenFont("Xerox Sans Serif Wide Bold.ttf",50);
+    if(g_font_text==NULL) return false;
     return success;
 }
 
@@ -155,7 +262,6 @@ SDL_Surface* LoadImage(string file_path){
     }
     return optimize_image;
 }
-
 bool loadMedia(){
     //co khoi tao
     bool success=true;

@@ -17,13 +17,15 @@
     ngẫu nhiên mới sẽ được sinh ra
     Game sẽ kết thúc khi người chơi không còn có thể di chuyển ảnh cộng vào nhau hoặc khi
     ảnh 2048 xuất hiện.
+    Sau khi trò chơi kết thúc, điểm và màn hình "YOU WIN" sẽ được đưa ra.
 ## Các ý tưởng chính:
+
     -Mở thiết lập cửa sổ, thiết lập các chức năng load ảnh và sử dụng nhạc( tham khảo tại https://lazyfoo.net/tutorials/SDL/index.php)
 
     -Đầu tiên sẽ load ảnh BackgroundMenu lên, thêm chức năng nhấn Enter để chuyển đến BackgroundMain là nền chính trò chơi và khởi động nhạc nền
     Phím Enter được dùng để khởi động lại nhạc nền.
     -Đi vào cơ chế game:
-        + Đầu tiên:
+        + khai báo các hằng số const, mảng một chiều và hai chiều cần dùng trong cơ chế game
             * Khai báo các hằng số const bao gồm StartWidth,StartHeight,WidthABox,HeightABox,Space
              Trong đó : StartWidth và StartHeight lần lượt là tọa độ xuất phát, có nghĩa là tọa độ của ô đầu tiên trong bảng 4x4
                          WidthABox và HeightABox lần lượt là chiều rộng và chiều cao của một ô 
@@ -36,8 +38,8 @@
              *tạo mảng hai chiều pair arr để lưu lại tọa độ đi kèm vs ảnh tại các ô, thành phần đầu tiên là Board (tọa độ của các ô trong bảng) và 
              thành phần thứ hai là Box(ảnh tại các ô trong bảng)
 
-        +Tiếp theo:
-            * Về phần cơ chế chính của bài(thiết lập các hàm chính):
+        + Về phần cơ chế chính của bài(thiết lập các hàm chính):
+            
             ->Hàm sinh số ngẫu nhiên void generateUnoccupiedPostion()
                 (): tạo mảng vector pair ArraySaveRect dùng để lưu lại tọa độ của các ô còn trống để sinh ảnh ngẫu nhiên, với hai thành phần lần lượt là số dạng int 
                 là hoành độ và tung độ của ô thỏa mãn chưa có ảnh 
@@ -53,30 +55,30 @@
             ->hàm void Endgame() dùng để soát điều kiện endgame, điều kiện end game ở đây là: khi có đủ ảnh cho 16 ô, các ô không có ô nào liền cạnh hay liền trên hoặc
             liền dưới giống với ảnh ô đó đang chứa, tức là không còn khả năng cộng, và thế là cũng không có khả năng di chuyển tiếp thì hiện màn hình end game, hoặc 
             người chơi thật sự thắng game, chỉ cần hiện ra ảnh 2048 thì sẽ thắng trò chơi
-
+            ->hàm ShowMark(): để hiện thị điểm số.
         + Di chuyển trong game:
-        ở đây có một khóa key, khóa key sẽ giúp cho sau khi nhấn enter vào màn hình chính thì sau khi nhấn enter lần nữa không bị lặp lại hành động đó
+            ở đây có một khóa key, khóa key sẽ giúp cho sau khi nhấn enter vào màn hình chính thì sau khi nhấn enter lần nữa không bị lặp lại hành động đó
             -> Di chuyển xuống:
                 Khi nguời chơi ấn phím down trên bàn phím, soát tung độ từ lớn nhất về thấp nhất, hoành độ từ thấp nhất đến lớn nhất
-                Kiểm tra xem ô phía dưới có nằm trong tọa độ bảng hay không, nếu không thì không thực hiện tiếp của ô đó, nếu có thì kiểm tra xem ô phía dưới đó
-                có ảnh hay không, nếu không thì di chuyển xuống, nếu có thì lại xem xem nó ảnh đó có giống với nó hay không( kiểm tra khả năng cộng), nếu có thì thực hiện
-                Kiểm tra xem hai ô đó đồng thời cùng mang ảnh là ảnh mang số gì(dựa vào địa chỉ được lưu trong danh sách path), gán cho cả hai ảnh đó về NULL,ảnh của
-                ô mang vị trí lúc chưa di chuyển được tăng lên thêm một nấc( ví dụ, hai vị trí mang ảnh số 2 tức là tương ứng path[0], khi di chuyển được cộng lại, thì
-                được xét trước sẽ mang ảnh path[0+1] tức là ảnh số 4) và tọa độ của ảnh chứa tọa độ NextI, Next J được trả về 0 0.
+                Kiểm tra xem ô phía dưới có nằm trong tọa độ bảng hay không, nếu không thì không thực hiện tiếp cơ chế của ô đó, nếu có thì kiểm tra xem ô phía dưới đó có ảnh hay không, nếu không thì di chuyển xuống, nếu có thì lại xem xem nó ảnh đó có giống với nó hay không( kiểm tra khả năng cộng), nếu có thì thực hiện như sau:
+                Kiểm tra xem hai ô đó đồng thời cùng mang ảnh là ảnh mang số gì(dựa vào địa chỉ được lưu trong danh sách path), gán cho cả hai ảnh đó về NULL,ảnh của ô mang vị trí lúc chưa di chuyển được tăng lên thêm một nấc( ví dụ, hai vị trí mang ảnh số 2 tức là tương ứng path[0], khi di chuyển được cộng lại, thì được xét trước sẽ mang ảnh path[0+1] tức là ảnh số 4) và tọa độ của ảnh chứa tọa độ NextI, Next J được trả về 0 0.
                 Sinh số ngẫu nhiên bằng hàm generateUnoccupiedPostion()
             -> Các di chuyển Up,Right, Left cũng có cơ chế khá tương tự với Down
+        + Cách tính điểm: 
+            ứng với mỗi ô tương ứng được cộng (ví dụ 2+2 ->4) ta sẽ cộng đúng số điểm đó ( ví dụ đang xét :4) vào số điểm trước đó.
         
 # 3.Mô tả các chức năng đã cài đặt, kèm video minh họa (chèn link video youtube)
 	Sử dụng bàn phím:
 	Phím Enter nhấn lần đầu tiên có chức năng chuyển từ background ban đầu sang background bảng chính để chơi game và khởi động nhạc nền.
 	Di chuyển lên, xuống,sang trái,sang phải để chơi.
-## Link video: https://youtu.be/RzW8A736RGU
+## Link video: https://youtu.be/G5WmLnV0DaM
 # 4.Các kỹ thuật lập trình được sử dụng trong chương trình (mảng, con trỏ, cấu trúc, lớp, đồ họa ...)
 
 	Kĩ thuật được dùng nhiều nhất trong bài là sử dụng mảng, bởi đa phần chỉ cần liên kết ảnh với tọa độ để kiểm tra và sử dụng các hàm.
 	Trong bài có sử dụng cả mảng hai chiều và mảng một chiều, mảng động và mảng tĩnh
 	Bài tập được sử dụng SDL2, sử dụng ảnh và âm thanh
 	Trong bài có sử dụng khá nhiều pair để tạo dây xích kết nối giữa tọa độ và ảnh
+    Trong bài có dùng một số Class với mục đích để đưa Score ra sau khi trò chơi kết thúc.
 # 5.Kết luận, hướng phát triển và các điều tâm đắc rút ra được sau khi hoàn thiện chương trình
 	Tâm đắc:
 	+Tự mình code cơ chế.
