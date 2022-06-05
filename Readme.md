@@ -70,20 +70,27 @@
 # 3.Mô tả các chức năng đã cài đặt, kèm video minh họa (chèn link video youtube)
 	Sử dụng bàn phím:
 	Phím Enter nhấn lần đầu tiên có chức năng chuyển từ background ban đầu sang background bảng chính để chơi game và khởi động nhạc nền.
+    Sau đó nút Enter được sử dụng để khởi động lại nhạc nền.
 	Di chuyển lên, xuống,sang trái,sang phải để chơi.
+    Điểm sẽ xuất hiện cùng với màn hình cuối khi trò chơi kết thúc.
+
 ## Link video: https://youtu.be/G5WmLnV0DaM
 # 4.Các kỹ thuật lập trình được sử dụng trong chương trình (mảng, con trỏ, cấu trúc, lớp, đồ họa ...)
 
 	Kĩ thuật được dùng nhiều nhất trong bài là sử dụng mảng, bởi đa phần chỉ cần liên kết ảnh với tọa độ để kiểm tra và sử dụng các hàm.
 	Trong bài có sử dụng cả mảng hai chiều và mảng một chiều, mảng động và mảng tĩnh
-	Bài tập được sử dụng SDL2, sử dụng ảnh và âm thanh
+	Bài tập được sử dụng SDL2, sử dụng ảnh(SDL2/SDL_image.h), âm thanh(SDL2/SDL_mixer.h), đưa điểm ra màn hình bằng SDL2/SDL_ttf.h
 	Trong bài có sử dụng khá nhiều pair để tạo dây xích kết nối giữa tọa độ và ảnh
     Trong bài có dùng một số Class với mục đích để đưa Score ra sau khi trò chơi kết thúc.
 # 5.Kết luận, hướng phát triển và các điều tâm đắc rút ra được sau khi hoàn thiện chương trình
 	Tâm đắc:
 	+Tự mình code cơ chế.
+    +Tự suy nghĩ và làm ra cơ chế. 
 	+Hiểu thêm một số cách hoạt động và bản chất của một số hàm SDL2.
+    +Tìm hiểu được một số kĩ thuật mới.
 	Hướng phát triển:
 	+Thêm một số tính năng mới cho game.
 	+kéo thả kích thước cửa sổ.
+    +Rút gọn code.
+    
 
