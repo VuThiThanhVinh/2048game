@@ -8,7 +8,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This program built for i386-pc-mingw32
  
 
-# Make data base, printed on Mon Jun 06 01:18:49 2022
+# Make data base, printed on Mon Jun 06 01:23:27 2022
 
 # Variables
 
@@ -57,7 +57,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-915b1b18-c524-4799-8136-1da23eef315d-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-46ed6246-8f7e-418c-b2c2-c1832e08d976-sock
 # environment
 VSCODE_CWD = C:\Users\Vu Thi Thanh VINH\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -81,7 +81,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_18080_UYZXEWRXFSWFEEIS
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_20680_WEELDFVESYFWNOYG
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -119,7 +119,8 @@ MAKE_VERSION := 3.81
 # makefile
 .DEFAULT_GOAL := all
 # environment
-PROGRAMFILES(X86) = C:\Program Files (x86)
+PRO 
+GRAMFILES(X86) = C:\Program Files (x86)
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -136,8 +137,7 @@ PROCESSOR_ARCHITEW6432 = AMD64
 *F = $(notdir $*)
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD
-# environmen 
-t
+# environment
 OS = Windows_NT
 # environment
 VSCODE_IPC_HOOK = \\.\pipe\d220ffe9727b2e539d26adc7b7a10f59-1.67.2-main-sock
@@ -188,7 +188,7 @@ PROCESSOR_LEVEL = 23
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 18080
+VSCODE_PID = 20680
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-D3RJER2
 # variable set hash-table stats:
@@ -229,7 +229,8 @@ all:
 #  Command-line target.
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `'
-#  File does not exist.
+#  File 
+ does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
@@ -275,8 +276,7 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-# files hash-table stats 
-:
+# files hash-table stats:
 # Load=4/1024=0%, Rehash=0, Collisions=0/17=0%
 # VPATH Search Paths
 
@@ -289,6 +289,6 @@ makefile:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Jun 06 01:18:49 2022
+# Finished Make data base on Mon Jun 06 01:23:27 2022
 
  

@@ -80,7 +80,7 @@
 	Kĩ thuật được dùng nhiều nhất trong bài là sử dụng mảng, bởi đa phần chỉ cần liên kết ảnh với tọa độ để kiểm tra và sử dụng các hàm.
 	Trong bài có sử dụng cả mảng hai chiều và mảng một chiều, mảng động và mảng tĩnh.
 	Bài tập được sử dụng SDL2, sử dụng ảnh(SDL2/SDL_image.h), âm thanh(SDL2/SDL_mixer.h), đưa điểm ra màn hình ( SDL2/SDL_ttf.h)
-    Có sử dụng enum.
+    Có sử dụng enum,string.
 	Trong bài có sử dụng khá nhiều pair để tạo dây xích kết nối giữa tọa độ và ảnh.
     Trong bài có dùng một số Class với mục đích để đưa Score ra sau khi trò chơi kết thúc.
 # 5.Kết luận, hướng phát triển và các điều tâm đắc rút ra được sau khi hoàn thiện chương trình
